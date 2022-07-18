@@ -15,11 +15,8 @@ app.use(express.json())
 const categoryModel = require('./src/models/category.model')
 
 const port = process.env.PORT;
-// mongo db link inside container
-//const db_link = 'mongodb://root:sandip@mongo:27017/first_db';
-
 // mongodb link to connect from outside container
-const db_link = process.env.MONGO_URL; //'mongodb://root:sandip@localhost:27017/';
+const db_link = process.env.MONGO_URL; 
 
 
 (async ()=>{
